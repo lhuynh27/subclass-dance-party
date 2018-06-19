@@ -1,6 +1,6 @@
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
-  debugger;
   makeDancer.call(this, top, left, timeBetweenSteps);
+  this.$node.append('<img src=http://media.petsathome.com/wcsstore/pah-cas01//c/puppyL.png>')
 };
 
 // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
@@ -17,4 +17,8 @@ makeBlinkyDancer.prototype.step = function(timeBetweenSteps) {
   // See http://api.jquery.com/category/effects/ for this and
   // other effects you can use on a jQuery-wrapped html tag.
   this.$node.toggle();
+};
+
+makeBlinkyDancer.prototype.lineUp = function(offset) {
+  this.setPosition(200, 100 + (offset * 70));
 };
