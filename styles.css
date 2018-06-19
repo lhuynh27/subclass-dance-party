@@ -21,7 +21,31 @@ body, a:link, a:visited, a:active{
   background-color: #777;
 }
 .dancer{
-  border:10px solid red;
-  border-radius:10px;
+
+  position:absolute;
+  width:50px;
+}
+
+.sliding{
+  border: none;
+  border-radius: none;
+  position:absolute;
+  width: 50px;
+  height: auto; 
+  width: auto; 
+  max-width: 50px; 
+  max-height: 50px;
+}
+
+img {
+  height: auto; 
+  width: auto; 
+  max-width: 50px; 
+  max-height: 50px;
+}
+
+.fading{
+  border: none;
+  border-radius: none;
   position:absolute;
 }
