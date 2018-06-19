@@ -38,9 +38,12 @@ $(document).ready(function() {
     }
     
   });
-  $('.fading').on('mouseover', function(event) {
-    $('.fading').hide();
-  });
+  $(document).on('mouseenter', '.spinny', (function(event) {
+    $('.spinny').hide();
+  }));
+
+ 
+  
 
 });
 
