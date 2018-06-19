@@ -1,7 +1,7 @@
 var makeFadingDancer = function(top, left, timeBetweenFades) {
   makeDancer.call(this, top, left, timeBetweenFades);
   this.$node.addClass('fading');
-  this.$node.append('<img src=https://i2.wp.com/freepngimages.com/wp-content/uploads/2015/12/cute-puppy-climbing.png?resize=624%2C624>');
+  this.$node.append('<img src=https://i.imgur.com/0k5IEnC.gif>');
 };
 
 // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
@@ -22,5 +22,5 @@ makeFadingDancer.prototype.step = function(timeBetweenFades) {
 };
 
 makeFadingDancer.prototype.lineUp = function(offset) {
-  this.setPosition(200, 100 + (offset * 70));
+  this.setPosition(300 + (offset * 250), 300);
 };

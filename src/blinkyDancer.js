@@ -1,6 +1,7 @@
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
-  this.$node.append('<img src=http://media.petsathome.com/wcsstore/pah-cas01//c/puppyL.png>')
+  this.$node.append('<img src=https://vignette.wikia.nocookie.net/inanimateinsanity/images/7/7e/Shiba-inu.png/revision/latest/scale-to-width-down/556?cb=20180215124137>');
+
 };
 
 // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
@@ -20,5 +21,5 @@ makeBlinkyDancer.prototype.step = function(timeBetweenSteps) {
 };
 
 makeBlinkyDancer.prototype.lineUp = function(offset) {
-  this.setPosition(200, 100 + (offset * 70));
+  this.setPosition(300 + (offset * 250), 300);
 };

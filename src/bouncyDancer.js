@@ -17,3 +17,7 @@ makeBouncyDancer.prototype.step = function(timeBetweenSteps) {
   // other effects you can use on a jQuery-wrapped html tag.
   this.$node.toggle();
 };
+
+makeBouncyDancer.prototype.lineUp = function(offset) {
+  this.setPosition(300 + (offset * 250), 300);
+};
