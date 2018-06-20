@@ -21,6 +21,6 @@ makeSlidingDancer.prototype.step = function(timeBetweenSlides) {
   this.$node.slideToggle('fast');
 };
 
-makeSlidingDancer.prototype.lineUp = function(offset) {
-  this.setPosition(300 + (offset * 250), 300);
+makeSlidingDancer.prototype.clusterByClass = function(offset) {
+  this.setPosition(100 + (offset * 150), 700);
 };

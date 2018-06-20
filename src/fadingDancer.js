@@ -21,6 +21,6 @@ makeFadingDancer.prototype.step = function(timeBetweenFades) {
   this.$node.fadeToggle();
 };
 
-makeFadingDancer.prototype.lineUp = function(offset) {
-  this.setPosition(300 + (offset * 250), 300);
+makeFadingDancer.prototype.clusterByClass = function(offset) {
+  this.setPosition(100 + (offset * 150), 500);
 };

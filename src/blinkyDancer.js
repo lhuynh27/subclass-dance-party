@@ -1,5 +1,6 @@
 var makeBlinkyDancer = function(top, left, timeBetweenSteps) {
   makeDancer.call(this, top, left, timeBetweenSteps);
+  this.$node.addClass('blinky');
   this.$node.append('<img src=https://vignette.wikia.nocookie.net/inanimateinsanity/images/7/7e/Shiba-inu.png/revision/latest/scale-to-width-down/556?cb=20180215124137>');
 
 };
@@ -20,6 +21,6 @@ makeBlinkyDancer.prototype.step = function(timeBetweenSteps) {
   this.$node.toggle();
 };
 
-makeBlinkyDancer.prototype.lineUp = function(offset) {
-  this.setPosition(300 + (offset * 250), 300);
+makeBlinkyDancer.prototype.clusterByClass = function(offset) {
+  this.setPosition(100 + (offset * 150), 300);
 };

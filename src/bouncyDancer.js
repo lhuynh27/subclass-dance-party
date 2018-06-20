@@ -19,5 +19,5 @@ makeBouncyDancer.prototype.step = function(timeBetweenSteps) {
 };
 
 makeBouncyDancer.prototype.lineUp = function(offset) {
-  this.setPosition(300 + (offset * 250), 300);
+  this.setPosition(100 + (offset * 150), 300);
 };
