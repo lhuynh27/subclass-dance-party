@@ -36,8 +36,34 @@ $(document).ready(function() {
     for(var i = 0; i < window.dancers.length; i++){
       window.dancers[i].lineUp(i);
     }
-    
   });
+
+  $('.clusterButton').on('click', function(event) {
+    var blinkyCount = 0;
+    var fadingCount = 0;
+    var slidingCount = 0;
+    var spinnyCount = 0;
+    console.log('hello');
+    for(var i = 0; i < window.dancers.length; i++){
+      if(window.dancers[i].$node.hasClass('blinky')){
+        blinkyCount++;
+        window.dancers[i].clusterByClass(blinkyCount);
+      }
+      if(window.dancers[i].$node.hasClass('fading')){
+        fadingCount++;
+        window.dancers[i].clusterByClass(fadingCount);
+      }
+      if(window.dancers[i].$node.hasClass('sliding')){
+        slidingCount++;
+        window.dancers[i].clusterByClass(slidingCount);
+      }
+      if(window.dancers[i].$node.hasClass('spinny')){
+        spinnyCount++;
+        window.dancers[i].clusterByClass(spinnyCount);
+      }
+    }
+  });
+
   $(document).on('mouseenter', '.spinny', (function(event) {
     $('.spinny').hide();
   }));
