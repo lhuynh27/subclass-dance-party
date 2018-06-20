@@ -1,9 +1,13 @@
+//SPIN, BABY SPIN!
+
 var makeSpinnyDancer = function(top, left, timeBetweenSpins) {
   makeDancer.call(this, top, left, timeBetweenSpins);
   this.$node.addClass('spinny');
   this.$node.addClass('w3-spin');
   this.$node.append('<img src=https://i2.wp.com/freepngimages.com/wp-content/uploads/2015/12/cute-puppy-climbing.png?resize=624%2C624>');55
-  //this.$node.animate({'right: += 50px'}, 'fast');
+  // this.$node.animate({'right: += 50px'}, 'fast');
+  this.left = left;
+  this.top = top;
 };
 
 // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
@@ -23,6 +27,8 @@ makeSpinnyDancer.prototype.step = function(timeBetweenSpins) {
 
 makeSpinnyDancer.prototype.clusterByClass = function(offset) {
   this.setPosition(100 + (offset * 150), 900);
+  this.left = 900;
+  this.top = 100 + (offset * 150);
 };
 
 // makeSpinnyDancer.prototype.walk = function(offset) {

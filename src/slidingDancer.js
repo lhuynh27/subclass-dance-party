@@ -1,8 +1,11 @@
+//NOW SLIDE!
 
 var makeSlidingDancer = function(top, left, timeBetweenSlides) {
   makeDancer.call(this, top, left, timeBetweenSlides);
   this.$node.addClass('sliding');
-  this.$node.append('<img src=https://myfirstshiba.com/wp-content/uploads/2017/08/AdobeStock_130694164_reduced.png>')
+  this.$node.append('<img src=https://i.gifer.com/YzDQ.gif>')
+  this.left = left;
+  this.top = top;
 };
 
 // we plan to overwrite the step function below, but we still want the superclass step behavior to work,
@@ -23,4 +26,6 @@ makeSlidingDancer.prototype.step = function(timeBetweenSlides) {
 
 makeSlidingDancer.prototype.clusterByClass = function(offset) {
   this.setPosition(100 + (offset * 150), 700);
+  this.left = 300;
+  this.top = 100 + (offset * 150);  
 };

@@ -1,5 +1,6 @@
 $(document).ready(function() {
   window.dancers = [];
+  window.dogHouse;
 
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
@@ -28,8 +29,11 @@ $(document).ready(function() {
       Math.random() * 1000
     );
     $('body').append(dancer.$node);
-    window.dancers.push(dancer);
-    console.log(window.dancers);
+    if (!dancer.$node.hasClass('dogHouseClass')) {
+      window.dancers.push(dancer);
+    } else {
+      window.dogHouse = dancer;   
+    }
   });
   
   $('.lineUpButton').on('click', function(event) {
@@ -63,13 +67,18 @@ $(document).ready(function() {
       }
     }
   });
+  
+  $('.sleepTimeButton').on('click', function(event) {
+    var top = window.dogHouse.top;
+    var left = window.dogHouse.left;
+    for(var i = 0; i < window.dancers.length; i++){
+      window.dancers[i].goHome(top, left);
+    }
+  });
 
   $(document).on('mouseenter', '.spinny', (function(event) {
     $('.spinny').hide();
   }));
-
- 
-  
 
 });
 
