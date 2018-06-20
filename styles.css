@@ -3,7 +3,7 @@ body, html{
 }
 body{
   margin: 0px;
-  background-color:#444;
+  background-image: url('https://www.hdwallpapers.in/walls/early_sunrise-wide.jpg');
   font-size: 18px;
 }
 body, a:link, a:visited, a:active{
@@ -19,6 +19,9 @@ body, a:link, a:visited, a:active{
 }
 .title{
   background-color: #777;
+}
+.shibaTitle {
+  text-align: center;
 }
 .dancer{
   position:absolute;
@@ -39,6 +42,12 @@ img {
 }
 
 .fading{
+  border: none;
+  border-radius: none;
+  position:absolute;
+}
+
+.spinny{
   border: none;
   border-radius: none;
   position:absolute;
